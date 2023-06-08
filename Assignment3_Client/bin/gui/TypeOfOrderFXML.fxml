@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="723.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TypeOfOrderController">
+   <children>
+      <Text fill="#d39b4b" layoutX="197.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type Of Order" wrappingWidth="376.1103515625">
+         <font>
+            <Font name="Rockwell" size="50.0" />
+         </font>
+      </Text>
+      <Button layoutX="128.0" layoutY="92.0" mnemonicParsing="false" onAction="#DeliveryFunction" prefHeight="128.0" prefWidth="478.0" styleClass="button-TypeOfOrder" stylesheets="@Buttons1.css" text="Delivery " textAlignment="RIGHT">
+         <font>
+            <Font size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="115.0" fitWidth="124.0">
+               <image>
+                  <Image url="icons/BikeDelivery.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="128.0" layoutY="261.0" mnemonicParsing="false" onAction="#PickUpFunction" prefHeight="128.0" prefWidth="478.0" styleClass="button-TypeOfOrder" stylesheets="@Buttons1.css" text="Pickup">
+         <font>
+            <Font size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="115.0" fitWidth="124.0">
+               <image>
+                  <Image url="icons/PickUp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backBtn" layoutX="261.0" layoutY="555.0" mnemonicParsing="false" onAction="#BackToRestPage" prefHeight="74.0" prefWidth="220.0" styleClass="button-back" stylesheets="@Buttons1.css" text="Back">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <ButtonBar fx:id="sharedBar" layoutX="238.0" layoutY="429.0" prefHeight="40.0" prefWidth="269.0">
+        <buttons>
+            <TextField fx:id="sharedtxt" promptText="Shared Code" stylesheets="@textfiel.css" />
+          <Button mnemonicParsing="false" onAction="#SharedBtn" prefHeight="47.0" styleClass="button-submit" stylesheets="@Buttons1.css" text="Submit" />
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="sharedlbl" layoutX="51.0" layoutY="443.0" prefHeight="28.0" prefWidth="189.0" text="Shared Delivery Code:" textFill="#eb8b00">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Text fx:id="errtxt" fill="RED" layoutX="137.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="469.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

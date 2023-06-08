@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="812.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.NormalUserHomePageController">
+   <children>
+      <Text fx:id="username" fill="WHITE" layoutX="147.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="164.6708984375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="new_order_btn" layoutX="299.0" layoutY="179.0" mnemonicParsing="false" onAction="#neworder" prefHeight="54.0" prefWidth="340.0" styleClass="button-submit" stylesheets="@Buttons1.css" text="New Order" textFill="WHITE">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Button layoutX="299.0" layoutY="265.0" mnemonicParsing="false" onAction="#QR_Import" prefHeight="54.0" prefWidth="340.0" styleClass="button-submit" stylesheets="@Buttons1.css" text="QR Import" textFill="WHITE">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <TextField fx:id="w4ctxt" layoutX="376.0" layoutY="112.0" promptText="W4C code" styleClass="input-field-blue" stylesheets="@../textfiel.css" />
+      <Button fx:id="QR_create" layoutX="14.0" layoutY="65.0" mnemonicParsing="false" onAction="#QR_Create" text="export" visible="false" />
+      <AnchorPane layoutY="102.0" prefHeight="412.0" prefWidth="181.0" style="-fx-background-color: #d39b4b;">
+         <children>
+            <Label layoutX="3.0" layoutY="145.0" prefHeight="35.0" prefWidth="71.0" text="Status:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="105.0" prefHeight="35.0" prefWidth="71.0" text="Name:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Text fx:id="status" layoutX="70.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.99999368190765">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Label layoutX="25.0" layoutY="61.0" prefHeight="35.0" prefWidth="106.0" text="Welcome">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text fx:id="clock" layoutX="8.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="164.6709069237113">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <Text fx:id="name" layoutX="66.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="113.99999368190765">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="balance" layoutX="4.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="companynametxt" layoutX="4.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="QRimage" fitHeight="120.0" fitWidth="150.0" layoutX="15.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" />
+           
+         </children>
+      </AnchorPane>
+      <Text fx:id="errtxt" fill="RED" layoutX="299.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="340.00000953674316">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="299.0" layoutY="343.0" mnemonicParsing="false" onAction="#OrderHistory" prefHeight="54.0" prefWidth="340.0" styleClass="button-submit" stylesheets="@Buttons1.css" text="Confirm Orders" textFill="WHITE">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Text fill="#eb8b00" layoutX="326.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Page">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Text>
+      <Button layoutX="713.0" layoutY="11.0" mnemonicParsing="false" onAction="#logoutbtn" prefHeight="82.0" prefWidth="86.0" style="-fx-background-color: #555555;">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="47.0">
+               <image>
+                  <Image url="icons/transparent-log-out-symbol-icon-arrows-icon-logout-icon-60748f03724088.284782351618251523468.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fx:id="pathtext" fill="WHITE" layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="366.6708984375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="276.0" layoutY="24.0">
+         <image>
+            <Image url="icons/home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="376.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="icons/mainDish.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

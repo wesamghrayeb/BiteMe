@@ -1,0 +1,22 @@
+
+.date-picker{
+    
+   
+    -fx-border-width:0;
+}
+.date-picker .arrow{
+
+    -fx-background-color:#eb8b00;
+}
+.date-picker .arrow-button{
+    -fx-background-color:grey;
+}
+.date-picker .list-cell{
+-fx-text-fill:#eb8b00;
+    -fx-background-color:white;
+}
+
+.date-picker .list-cell:hover{
+-fx-text-fill:#eb8b00;
+    -fx-background-color:#555555;
+}

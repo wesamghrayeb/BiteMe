@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="725.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EditUpdateMenu">
+   <children>
+      <AnchorPane layoutX="-3.0" prefHeight="725.0" prefWidth="987.0" style="-fx-background-color: #555555;">
+         <children>
+            <Text fill="#eb8b00" layoutX="368.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Menu" wrappingWidth="161.875">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="558.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="161.875">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+            <TabPane layoutY="113.0" prefHeight="612.0" prefWidth="1026.0" stylesheets="@tabs1.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Stock">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="544.0" prefWidth="1072.0" style="-fx-background-color: #666666;">
+                           <children>
+                              <ListView fx:id="itemslist" layoutX="301.0" layoutY="112.0" prefHeight="371.0" prefWidth="365.0" style="-fx-background-color: #555555;" />
+                              <Text fill="#eb8b00" layoutX="382.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant Item">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Edit menu">
+                    <content>
+                      <AnchorPane fx:id="statustext" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #666666;">
+                           <children>
+                              <TableView fx:id="MaindishTable" layoutX="32.0" layoutY="102.0" prefHeight="265.0" prefWidth="481.0" stylesheets="@tablevew.css">
+                                 <columns>
+                                    <TableColumn fx:id="MainDishID" prefWidth="84.0" text="Item-ID" />
+                                    <TableColumn fx:id="MainDishName" prefWidth="87.0" text="Name" />
+                                    <TableColumn fx:id="MainDishPrice" prefWidth="113.0" text="Price " />
+                                    <TableColumn fx:id="MainDishquantity" prefWidth="91.0" text="Quantity" />
+                                    <TableColumn fx:id="categorycl" prefWidth="105.0" text="category" />
+                                 </columns>
+                              </TableView>
+                              <ListView fx:id="listofaddition" layoutX="559.0" layoutY="100.0" prefHeight="270.0" prefWidth="125.0" />
+                              <Button layoutX="786.0" layoutY="384.0" mnemonicParsing="false" onAction="#addbut" prefHeight="43.0" prefWidth="123.0" styleClass="button-submit" stylesheets="@Buttons1.css" text="Add" />
+                              <Button layoutX="202.0" layoutY="423.0" mnemonicParsing="false" onAction="#removebt" prefHeight="54.0" prefWidth="155.0" styleClass="button-back" stylesheets="@Buttons1.css" text="Remove" />
+                              <Button layoutX="29.0" layoutY="424.0" mnemonicParsing="false" onAction="#editbut" prefHeight="54.0" prefWidth="145.0" styleClass="button-submit" stylesheets="@Buttons1.css" text="Update" />
+                              <CheckBox fx:id="checkaddition" layoutX="725.0" layoutY="51.0" mnemonicParsing="false" onAction="#checkaddition" text="Add Addition" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <TextField fx:id="additiontxt" layoutX="750.0" layoutY="78.0" promptText="Enter Addition" stylesheets="@textfiel.css" />
+                              <CheckBox fx:id="addnewmaindishchekbox" layoutX="725.0" layoutY="131.0" mnemonicParsing="false" onAction="#addnewmaindishchekbox" text="Add New Main Dish" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <TextField fx:id="pricetextmaindish" layoutX="750.0" layoutY="242.0" promptText="Enter Price" stylesheets="@textfiel.css" />
+                              <TextField fx:id="nameitemmaindishtxt" layoutX="751.0" layoutY="202.0" promptText="Enter Item Name" stylesheets="@textfiel.css" />
+                              <TextField fx:id="itemidtext" layoutX="751.0" layoutY="162.0" promptText="Enter Item ID" stylesheets="@textfiel.css" />
+                              <TextField fx:id="quantitymaintext" layoutX="750.0" layoutY="284.0" promptText="Enter Quantity" stylesheets="@textfiel.css" />
+                              <TextField fx:id="idi" layoutX="44.0" layoutY="384.0" prefHeight="31.0" prefWidth="90.0" promptText="ID" stylesheets="@textfiel.css" />
+                              <TextField fx:id="quantity" layoutX="346.0" layoutY="384.0" prefHeight="31.0" prefWidth="90.0" promptText="Quantity" stylesheets="@textfiel.css" />
+                              <TextField fx:id="price" layoutX="246.0" layoutY="384.0" prefHeight="31.0" prefWidth="90.0" promptText="Price" stylesheets="@textfiel.css" />
+                              <TextField fx:id="name" layoutX="144.0" layoutY="384.0" prefHeight="31.0" prefWidth="90.0" promptText="Name" stylesheets="@textfiel.css" />
+                              <Text fill="#eb8b00" layoutX="562.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Addition List" wrappingWidth="119.298828125">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="RED" layoutX="27.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you you want to add main dish and then addition you can`t add together." wrappingWidth="656.6708984375">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font></Text>
+                              <Text fx:id="ErrorText" fill="RED" layoutX="235.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="556.6708984375">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#f50000" layoutX="24.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1-Add new Main." wrappingWidth="279.6708984375">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font></Text>
+                              <Text fill="RED" layoutX="25.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2-Add Addition" wrappingWidth="279.6708984375">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font></Text>
+                              <ComboBox fx:id="searchcombox" layoutX="205.0" layoutY="14.0" prefWidth="150.0" promptText="Search " stylesheets="@combobox.css" />
+                              <Text fill="#eb8b00" layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by category:" wrappingWidth="202.87500168383121">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Text>
+                              <ComboBox fx:id="catogerycmbox" layoutX="747.0" layoutY="326.0" prefHeight="31.0" prefWidth="187.0" promptText="Choose Catogery" stylesheets="@combobox.css" />
+                              <TextField fx:id="Additiontextfield" layoutX="577.0" layoutY="384.0" prefHeight="31.0" prefWidth="90.0" promptText="Addition" stylesheets="@textfiel.css" />
+                              <Button layoutX="554.0" layoutY="422.0" mnemonicParsing="false" onAction="#removeAdditionbt" prefHeight="43.0" prefWidth="138.0" styleClass="button-back" stylesheets="@Buttons1.css" text="Remove" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Button layoutX="929.0" layoutY="20.0" mnemonicParsing="false" onAction="#logout" prefHeight="54.0" prefWidth="65.0" style="-fx-background-color: #555555;">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="58.0">
+                     <image>
+                        <Image url="icons/transparent-log-out-symbol-icon-arrows-icon-logout-icon-60748f03724088.284782351618251523468.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text fx:id="pathtext" fill="WHITE" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="336.6708984375">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="64.0" fitWidth="60.0" layoutX="528.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="icons/edit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

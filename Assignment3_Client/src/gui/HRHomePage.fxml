@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HrHomePageController">
+	<children>
+		<AnchorPane layoutX="-4.0" prefHeight="630.0" prefWidth="1183.0" style="-fx-background-color: #555555;">
+			<children>
+				<Text fill="#eb8b00" layoutX="32.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome HR,">
+					<font>
+						<Font name="System Bold" size="25.0" />
+					</font>
+				</Text>
+				<Text fx:id="HRusername" fill="#eb8b00" layoutX="191.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="249.0">
+					<font>
+						<Font name="System Bold" size="25.0" />
+					</font>
+				</Text>
+				<Button layoutX="1089.0" layoutY="10.0" mnemonicParsing="false" onAction="#logOut" prefHeight="54.0" prefWidth="65.0" style="-fx-background-color: #555555;">
+					<graphic>
+						<ImageView fitHeight="54.0" fitWidth="65.0">
+							<image>
+								<Image url="icons/transparent-log-out-symbol-icon-arrows-icon-logout-icon-60748f03724088.284782351618251523468.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<TableView fx:id="table" layoutX="20.0" layoutY="167.0" prefHeight="401.0" prefWidth="811.0" stylesheets="@tablevew.css">
+					<columns>
+						<TableColumn fx:id="IDcl" prefWidth="172.0" text="ID" />
+						<TableColumn fx:id="firstnamecl" prefWidth="113.0" text="FirstName" />
+						<TableColumn fx:id="lastnamecl" prefWidth="186.0" text="LastName" />
+						<TableColumn fx:id="emailcl" prefWidth="156.0" text="PhoneNumber" />
+						<TableColumn fx:id="passwordcl" prefWidth="183.0" text="Company" />
+					</columns>
+				</TableView>
+				<TextField fx:id="getID" editable="false" layoutX="964.0" layoutY="211.0" promptText="Enter ID" stylesheets="@textfiel.css" />
+				<Button layoutX="1047.0" layoutY="369.0" mnemonicParsing="false" onAction="#acceptbt" styleClass="button-submit" stylesheets="@Buttons1.css" text="Accept">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+					<effect>
+						<InnerShadow />
+					</effect>
+				</Button>
+				<Button layoutX="884.0" layoutY="371.0" mnemonicParsing="false" onAction="#deletbt" styleClass="button-back" stylesheets="@Buttons1.css" text="Delete">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+					<effect>
+						<InnerShadow />
+					</effect>
+				</Button>
+				<Text fill="#eb8b00" layoutX="452.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose ID to Delete Or Accept :" wrappingWidth="431.99999733269215">
+					<font>
+						<Font name="System Bold" size="22.0" />
+					</font>
+				</Text>
+				<Text fx:id="statustext" fill="#d39b4b" layoutX="866.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="283.6708984375">
+					<font>
+						<Font name="System Bold" size="22.0" />
+					</font>
+				</Text>
+            <CheckBox fx:id="dailycheckbox" layoutX="921.0" layoutY="271.0" mnemonicParsing="false" text="Daily" textFill="#eb8b00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="monthlycheckbox" layoutX="1034.0" layoutY="271.0" mnemonicParsing="false" text="Monthly" textFill="#eb8b00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="Amountval" layoutX="964.0" layoutY="315.0" promptText="Amount" stylesheets="@textfiel.css" />
+            <Label layoutX="866.0" layoutY="211.0" text="Enter ID:" textFill="#eb8b00">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="866.0" layoutY="315.0" text="Amount:" textFill="#eb8b00">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>

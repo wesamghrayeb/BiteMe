@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PaymentSuccessfulController">
+   <children>
+      <Label layoutX="245.0" layoutY="35.0" text="Payment Successful" textFill="#eb8b00">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="273.0" layoutY="467.0" mnemonicParsing="false" onAction="#BackToHomePage" styleClass="button-back" stylesheets="@Buttons1.css" text="Back To Home Page" />
+      <Label layoutX="8.0" layoutY="197.0" text="Order details will be sent to your registered email" textFill="#eb8b00">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="325.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="icons/lol.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="45.0" layoutX="568.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="icons/thumbs-up.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

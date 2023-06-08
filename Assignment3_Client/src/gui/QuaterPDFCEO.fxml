@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.QuaterPDFCEOController">
+   <children>
+      <TableView fx:id="Table" layoutX="101.0" layoutY="85.0" prefHeight="431.0" prefWidth="599.0">
+        <columns>
+          <TableColumn fx:id="Location" prefWidth="207.0" text="Location" />
+          <TableColumn fx:id="Year" prefWidth="215.0" text="Year" />
+            <TableColumn fx:id="Months" prefWidth="182.0" text="Months" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="281.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quarter PDF" wrappingWidth="211.6708984375">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="DownloadBtn" layoutX="621.0" layoutY="532.0" mnemonicParsing="false" onAction="#DownloadBtn" prefHeight="54.0" prefWidth="158.0" styleClass="button-submit" stylesheets="Buttons1.css" text="Download">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="22.0" layoutY="532.0" mnemonicParsing="false" onAction="#BackBtn" prefHeight="54.0" prefWidth="158.0" styleClass="button-back" stylesheets="Buttons1.css" text="Back">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Text fx:id="StatusText" fill="RED" layoutX="228.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="318.0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LogIn-&gt;CeoHomePage-&gt;QuarterPdf" wrappingWidth="396.6708984375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

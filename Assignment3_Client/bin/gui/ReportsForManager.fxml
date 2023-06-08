@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1009.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ReportsForManager">
+   <children>
+      <ComboBox fx:id="Reports" layoutX="395.0" layoutY="240.0" prefHeight="31.0" prefWidth="141.0" promptText="Reports" stylesheets="@combobox.css" />
+      <Label layoutX="381.0" layoutY="71.0" prefHeight="32.0" prefWidth="273.0" text="Reports Page" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="393.0" layoutY="503.0" mnemonicParsing="false" onAction="#GetReport" styleClass="button-submit" stylesheets="@Buttons1.css" text="Get report" />
+      <ComboBox fx:id="Month" layoutX="395.0" layoutY="419.0" prefHeight="31.0" prefWidth="141.0" promptText="Month" stylesheets="@combobox.css" />
+      <ComboBox fx:id="Year" layoutX="395.0" layoutY="362.0" prefHeight="31.0" prefWidth="141.0" promptText="Year" stylesheets="@combobox.css" />
+      <Button layoutX="60.0" layoutY="643.0" mnemonicParsing="false" onAction="#BackBtn" prefHeight="59.0" prefWidth="110.0" styleClass="button-back" stylesheets="@Buttons1.css" text="Back">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Text fx:id="StatusText" fill="RED" layoutX="322.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="637.0000054910779">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="Restaurant" layoutX="396.0" layoutY="300.0" prefHeight="31.0" prefWidth="141.0" promptText="Restaurant" stylesheets="@combobox.css" />
+   </children>
+</AnchorPane>
